@@ -1,10 +1,10 @@
 {
   "name": "verinode-backend",
   "version": "1.0.0",
-  "description": "Backend API for VeriNode — decentralized savings circles (ROSCA) protocol on Stellar Soroban",
+  "description": "Backend API for VeriNode \u2014 decentralized savings circles (ROSCA) protocol on Stellar Soroban",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "node init && tsc",
     "ci:validate-workflow": "node scripts/validate-ci-workflow.cjs",
     "test": "bash scripts/run-all-tests.sh",
     "test:consensus-sim": "npx tsx tests/consensus_sim.test.ts",
@@ -12,8 +12,7 @@
     "clean": "rm -rf dist",
     "test:payload-encryption": "npx tsx tests/security/payload_encryption.test.ts",
     "test:coverage": "c8 npm run test",
-    "coverage:enforce": "c8 check-coverage --lines 75 --functions 65 --branches 70",
-    "ci:validate-workflow": "node scripts/validate-ci-workflow.cjs"
+    "coverage:enforce": "c8 check-coverage --lines 75 --functions 65 --branches 70"
   },
   "repository": {
     "type": "git",
